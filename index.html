@@ -4110,7 +4110,21 @@
         handleScrollReveal();
         applyTranslations();
       });
+
+      // kunci klik kanan
+      document.addEventListener('contextmenu', e => e.preventDefault());
+      document.onkeydown = function(e) {
+          if (e.key === "F12" ||
+              (e.ctrlKey && e.shiftKey && e.key === "I") ||
+              (e.ctrlKey && e.shiftKey && e.key === "C") ||
+              (e.ctrlKey && e.shiftKey && e.key === "J") ||
+              (e.ctrlKey && e.key === "U")) {
+              return false;
+          }
+      };
+
     </script>
   </body>
 </html>
+
 
